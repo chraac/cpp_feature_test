@@ -39,6 +39,13 @@ struct TemplateParamArrayRedecl {
   enum { SizeOfArray = sizeof(type) };
 };
 
+/*
+template <const char (&arr)[], typename type = decltype(arr)>
+struct TemplateParamArrayReference {
+  enum { SizeOfArray = sizeof(type) };
+};
+*/
+
 }  // namespace
 
 TEST_CASE("test for array decay", "cpp.feature.test") {
@@ -60,6 +67,8 @@ TEST_CASE("test for array decay", "cpp.feature.test") {
 
   REQUIRE(TemplateParamArrayRedecl<kTestString>::SizeOfArray == sizeof(void *));
 
+  // REQUIRE(TemplateParamArrayReference<kTestString>::SizeOfArray ==
+  // sizeof(void *));
   // REQUIRE(TemplateParamArray2<kTestString>::SizeOfArray ==
   // sizeof(kTestString));
 }
