@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+    <!-- Adapter Specific sections -->
+    <Catch2Adapter disabled="false">
+	    <FilenameFilter>.*_unit_test$</FilenameFilter><!-- Regex filter -->
+		<DiscoverTimeout>10000</DiscoverTimeout><!-- Milliseconds -->
+        <IncludeHidden>true</IncludeHidden>
+		<Logging>verbose</Logging>
+        <MessageFormat>AdditionalInfo</MessageFormat>
+		<StackTraceFormat>ShortInfo</StackTraceFormat>
+        <StackTracePointReplacement>,</StackTracePointReplacement><!-- Introduced in v1.3.0 -->
+		<DebugBreak>on</DebugBreak><!-- Introduced in v1.1.0 -->
+    </Catch2Adapter>
+</RunSettings>
