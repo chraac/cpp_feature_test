@@ -2,7 +2,7 @@
 <RunSettings>
     <!-- Adapter Specific sections -->
     <Catch2Adapter disabled="false">
-	    <FilenameFilter>.*_unit_test$</FilenameFilter><!-- Regex filter -->
+	    <FilenameFilter>.*_test$</FilenameFilter><!-- Regex filter -->
 		<DiscoverTimeout>10000</DiscoverTimeout><!-- Milliseconds -->
         <IncludeHidden>true</IncludeHidden>
 		<Logging>verbose</Logging>
