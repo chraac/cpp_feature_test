@@ -13,7 +13,7 @@ before_script:
 script: 
   - cd ${BUILD_DIR} && make -j8
 after_script:
-  - ${BUILD_DIR}/cpp_feature_test
+  - cpp_feature_test
 branches:
   only:
   - master
