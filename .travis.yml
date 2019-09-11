@@ -12,6 +12,8 @@ before_script:
   - cmake -G "Unix Makefiles" -H. -B${BUILD_DIR}
 script: 
   - cd ${BUILD_DIR} && make -j8
+after_script:
+  - ${BUILD_DIR}/cpp_feature_test
 branches:
   only:
   - master
