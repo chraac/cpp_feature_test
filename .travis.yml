@@ -1,0 +1,23 @@
+language: cpp
+sudo: required
+compiler:
+  - clang
+os:
+  - linux
+addons:
+  apt:
+    packages:
+    - cmake
+before_script:
+  - cmake -G "Unix Makefiles" -H. -B${BUILD_DIR}
+script: 
+  - cd ${BUILD_DIR} && make -j8
+after_script:
+  - ./cpp_feature_test
+branches:
+  only:
+  - master
+  - ci
+env:
+  global:
+  - BUILD_DIR=build.linux

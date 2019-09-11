@@ -31,7 +31,7 @@ struct TemplateParamArray2 {
     return size;
   }
 
-  enum { SizeOfArray = GetArraySize(arr); };
+  enum { SizeOfArray = GetArraySize(arr) };
 };
 
 template <const char arr[], typename type = decltype(arr)>
